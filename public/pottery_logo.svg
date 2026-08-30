@@ -1,0 +1,41 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="clay" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c97b46"/>
+      <stop offset="1" stop-color="#8f4e26"/>
+    </linearGradient>
+  </defs>
+
+  <!-- outer ring -->
+  <circle cx="300" cy="230" r="190" fill="none" stroke="#8f4e26" stroke-width="4"/>
+  <circle cx="300" cy="230" r="170" fill="none" stroke="#c97b46" stroke-width="2"/>
+
+  <!-- potter's wheel base line -->
+  <ellipse cx="300" cy="335" rx="120" ry="16" fill="none" stroke="#8f4e26" stroke-width="4"/>
+
+  <!-- vase silhouette -->
+  <path d="M 265 130
+           C 250 145 248 165 258 185
+           C 225 210 218 260 235 300
+           C 245 322 265 335 300 335
+           C 335 335 355 322 365 300
+           C 382 260 375 210 342 185
+           C 352 165 350 145 335 130
+           Z"
+        fill="url(#clay)" stroke="#6b3a1c" stroke-width="4"/>
+
+  <!-- vase neck rim -->
+  <ellipse cx="300" cy="130" rx="35" ry="10" fill="#c97b46" stroke="#6b3a1c" stroke-width="4"/>
+
+  <!-- decorative throwing lines on vase -->
+  <path d="M 240 250 C 270 258 330 258 360 250" fill="none" stroke="#6b3a1c" stroke-width="2" opacity="0.6"/>
+  <path d="M 236 280 C 268 290 332 290 364 280" fill="none" stroke="#6b3a1c" stroke-width="2" opacity="0.6"/>
+
+  <!-- hands / shaping accents (simple curved marks either side) -->
+  <path d="M 210 300 C 195 285 195 260 210 245" fill="none" stroke="#8f4e26" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 390 300 C 405 285 405 260 390 245" fill="none" stroke="#8f4e26" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- wordmark -->
+  <text x="300" y="450" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" letter-spacing="8" fill="#6b3a1c">POTTERY</text>
+  <text x="300" y="485" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" letter-spacing="6" fill="#8f4e26">HANDCRAFTED CERAMICS</text>
+</svg>
