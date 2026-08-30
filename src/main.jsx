@@ -11,7 +11,7 @@ import {
 import './index.css'
 import App from './App.jsx'
 import AddCraftItem from './Component/Pages/AddCraftItem.jsx';
-import UpdateCraftItem from './Component/UpdateCraftItem.jsx';
+import UpdateCraft from './Component/Pages/UpdateCraft.jsx';
 import Routes from './Component/Routes/Routes.jsx';
 
 

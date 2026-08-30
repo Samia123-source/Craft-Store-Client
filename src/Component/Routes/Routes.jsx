@@ -4,14 +4,11 @@
 import { createBrowserRouter } from "react-router-dom"
 import Home from "../Pages/Home/Home"
 import AddCraftItem from "../Pages/AddCraftItem"
-import UpdateCraftItem from "../UpdateCraftItem"
 import Root from "../Layout/Root"
 import SignIn from "../Pages/SignIn"
-import SignUp from "../Pages/Register"
 import Register from "../Pages/Register"
 import CraftList from "../Pages/CraftList"
-import App from "../../App"
-
+import UpdateCraft from "../Pages/UpdateCraft"
 
 const Routes = createBrowserRouter([
   
@@ -37,8 +34,9 @@ const Routes = createBrowserRouter([
                 element: <AddCraftItem></AddCraftItem>
             },
             {
-                path: "/updateCraft",
-                element: <UpdateCraftItem></UpdateCraftItem>
+                path: "/updateCraft/:id",
+                element: <UpdateCraft></UpdateCraft>,
+                loader:({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
             },
             {
                 path:"/signIn",
@@ -52,6 +50,4 @@ const Routes = createBrowserRouter([
         ]
     }
 ])
- 
-
 export default Routes
