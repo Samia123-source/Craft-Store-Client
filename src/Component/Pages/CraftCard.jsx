@@ -52,7 +52,9 @@ const CraftCard = ({craft}) => {
     <p className="text-2xl">{details}</p>
     <div className="card-actions justify-end">
       <div className="join join-vertical gap-4">
+  <Link to={`/craft/${_id}`}>
   <button className="btn btn-active">View Details</button>
+  </Link>
   <Link to= {`/updateCraft/${_id}`}>  
      <button className="btn btn-active">Edit</button>
   </Link>

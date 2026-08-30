@@ -9,6 +9,7 @@ import SignIn from "../Pages/SignIn"
 import Register from "../Pages/Register"
 import CraftList from "../Pages/CraftList"
 import UpdateCraft from "../Pages/UpdateCraft"
+import CraftDetails from "../Pages/CraftDetails"
 
 const Routes = createBrowserRouter([
   
@@ -37,6 +38,11 @@ const Routes = createBrowserRouter([
                 path: "/updateCraft/:id",
                 element: <UpdateCraft></UpdateCraft>,
                 loader:({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
+            },
+            {
+                path: '/craft/:id',
+                element: <CraftDetails></CraftDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
             },
             {
                 path:"/signIn",
