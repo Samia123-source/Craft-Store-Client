@@ -8,7 +8,8 @@ import { useState } from "react";
 
 const CraftList = () => {
 
-  const crafts = useLoaderData();
+  const loadedcrafts = useLoaderData();
+  const[crafts, setCrafts] = useState(loadedcrafts);
 
   return (
    
@@ -16,7 +17,7 @@ const CraftList = () => {
         <h2>craftList:{crafts.length}</h2>
        <div className="grid md:grid-cols-2 gap-4 ">
          {
-           crafts.map(craft => <CraftCard key={craft._id} craft={craft}></CraftCard>)
+           crafts.map(craft => <CraftCard key={craft._id} craft={craft} crafts={crafts} setCrafts={setCrafts}></CraftCard>)
         }
        </div>
     </div>

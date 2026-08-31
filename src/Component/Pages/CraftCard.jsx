@@ -1,10 +1,10 @@
 
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-const CraftCard = ({craft}) => {
+const CraftCard = ({craft, crafts, setCrafts}) => {
     const {_id, name, availability, price, details, photo} = craft;
 
-  const handleDelete = id => {
+  const handleDelete = _id => {
     console.log(_id);
     
    Swal.fire({
@@ -31,7 +31,10 @@ const CraftCard = ({craft}) => {
         text: "Your Item has been deleted.",
         icon: "success"
       });
+      const remaining = crafts.filter(craf => craf._id !== _id)
+      setCrafts(remaining);
       }
+      
     })
   }
    
