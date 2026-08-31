@@ -13,6 +13,7 @@ import App from './App.jsx'
 import AddCraftItem from './Component/Pages/AddCraftItem.jsx';
 import UpdateCraft from './Component/Pages/UpdateCraft.jsx';
 import Routes from './Component/Routes/Routes.jsx';
+import AuthProvider from './Component/Provider/AuthProvider.jsx';
 
 
 
@@ -20,6 +21,8 @@ import Routes from './Component/Routes/Routes.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-     <RouterProvider router={Routes} />
+    <AuthProvider>
+       <RouterProvider router={Routes} />
+    </AuthProvider>
   </StrictMode>,
 )

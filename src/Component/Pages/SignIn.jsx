@@ -1,8 +1,11 @@
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 const SignIn = () => {
+
+  const {signInUser} = useContext(AuthContext);
 
   const handleLogIn= e =>{
     e.preventDefault();
@@ -11,6 +14,34 @@ const SignIn = () => {
     const email = form.get('email');
     const password = form.get('password')
     console.log(email, password)
+
+    signInUser(email, password)
+    .then(result => {
+      console.log(result.user);
+      const user = {
+        email,
+       lastLoggedAt: result.user?.metadata?.lastSignInTime
+      }
+       // update last logged at in the database
+
+       fetch("http://localhost:5000/user",{
+        method: "PATCH",
+        headers: {
+          "content-type": 'application/json'
+        },
+        body: JSON.stringify(user)
+       })
+       .then(res => res.json())
+       .then(data => {
+        console.log(data);
+       })
+    })
+    .catch(error =>{
+       console.error(error); 
+
+    }
+     
+    )
     
 
   }

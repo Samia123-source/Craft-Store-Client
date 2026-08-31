@@ -1,15 +1,54 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom"
-
+import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 const Register = () => {
+
+   const {createUser} = useContext(AuthContext);
+
   const handleRegister = e => {
     e.preventDefault();
-    console.log(e.currentTarget);
+   
     const form = new FormData(e.currentTarget);
     const name = form.get('name');
     const photo = form.get('photo');
     const email = form.get('email');
     const password = form.get('password')
-    console.log(name, photo, email,password);
+    console.log(name, photo, email, password);
+    createUser(email, password)
+      .then(result => {
+        console.log(result.user);
+        // new user has been created
+
+        const createdAt = result.user?.metadata?.creationTime;
+        
+        const user ={email, createdAt: createdAt};
+        fetch('http://localhost:5000/user',{
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(user)
+        })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+           if (data.insertedId) {
+                    Swal.fire({
+                      title: "Success",
+                      text: "User Added to the database",
+                      icon: "success",
+                      confirmButtonText: "Cool!"
+                      
+                    });
+                  }
+        })
+
+      })
+      .catch(error => {
+        console.error(error)
+
+      })
   }
   return (
       <div className=" flex flex-col items-center justify-center">

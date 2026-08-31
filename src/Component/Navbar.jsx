@@ -8,6 +8,8 @@ const Navbar = () => {
     <li><NavLink to="/addCraft">Add Craft Item</NavLink></li>
     
     <li><NavLink to="/register">Register</NavLink></li>
+    <li><NavLink to="/users">Users</NavLink></li>
+    
     </>
   return (
 <div className="absolute top-0 left-0 w-full z-50 m-0">

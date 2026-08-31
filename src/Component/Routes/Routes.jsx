@@ -10,6 +10,7 @@ import Register from "../Pages/Register"
 import CraftList from "../Pages/CraftList"
 import UpdateCraft from "../Pages/UpdateCraft"
 import CraftDetails from "../Pages/CraftDetails"
+import Users from "../Users"
 
 const Routes = createBrowserRouter([
   
@@ -53,6 +54,11 @@ const Routes = createBrowserRouter([
                 path:"/register",
                 element:<Register></Register>
 
+            },
+            {
+                path: '/users',
+                element:<Users></Users>,
+                loader: () => fetch('http://localhost:5000/user')
             }
         ]
     }
