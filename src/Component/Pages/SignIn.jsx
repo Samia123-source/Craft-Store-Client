@@ -1,11 +1,14 @@
 
 import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 const SignIn = () => {
 
   const {signInUser} = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log('location in the login page ', location)
 
   const handleLogIn= e =>{
     e.preventDefault();
@@ -18,6 +21,11 @@ const SignIn = () => {
     signInUser(email, password)
     .then(result => {
       console.log(result.user);
+
+      // navigate after login
+      navigate(location?.state ? location.state : '/');
+     
+
       const user = {
         email,
        lastLoggedAt: result.user?.metadata?.lastSignInTime
@@ -36,6 +44,8 @@ const SignIn = () => {
         console.log(data);
        })
     })
+
+
     .catch(error =>{
        console.error(error); 
 

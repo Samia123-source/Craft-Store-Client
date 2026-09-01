@@ -11,6 +11,8 @@ import CraftList from "../Pages/CraftList"
 import UpdateCraft from "../Pages/UpdateCraft"
 import CraftDetails from "../Pages/CraftDetails"
 import Users from "../Users"
+import PrivateRoute from "./PrivateRoute"
+
 
 const Routes = createBrowserRouter([
   
@@ -28,22 +30,23 @@ const Routes = createBrowserRouter([
             },
             {
                 path:'/craftList',
-                element:<CraftList></CraftList>,
+                element:<PrivateRoute><CraftList></CraftList></PrivateRoute>,
                 loader: () => fetch('http://localhost:5000/craft'),
               
             },
             {
                 path: "/addCraft",
-                element: <AddCraftItem></AddCraftItem>
+                element: <PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
             },
+           
             {
                 path: "/updateCraft/:id",
-                element: <UpdateCraft></UpdateCraft>,
+                element: <PrivateRoute><UpdateCraft></UpdateCraft></PrivateRoute>,
                 loader:({params})=> fetch(`http://localhost:5000/craft/${params.id}`)
             },
             {
                 path: '/craft/:id',
-                element: <CraftDetails></CraftDetails>,
+                element: <PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/craft/${params.id}`)
             },
             {
@@ -59,7 +62,9 @@ const Routes = createBrowserRouter([
                 path: '/users',
                 element:<Users></Users>,
                 loader: () => fetch('http://localhost:5000/user')
-            }
+            },
+          
+
         ]
     }
 ])

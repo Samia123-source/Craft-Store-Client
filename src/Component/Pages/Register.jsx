@@ -1,8 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom"
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
 const Register = () => {
+  const [registerError, setRegisterError ] = useState('');
+  const[success, setSuccess] = useState('');
 
    const {createUser} = useContext(AuthContext);
 
@@ -15,9 +17,18 @@ const Register = () => {
     const email = form.get('email');
     const password = form.get('password')
     console.log(name, photo, email, password);
-    createUser(email, password)
+
+
+      createUser(email, password)      
       .then(result => {
         console.log(result.user);
+
+              
+       
+
+        // reset error
+        setRegisterError('');
+        setSuccess('');
         // new user has been created
 
         const createdAt = result.user?.metadata?.creationTime;
@@ -36,7 +47,7 @@ const Register = () => {
            if (data.insertedId) {
                     Swal.fire({
                       title: "Success",
-                      text: "User Added to the database",
+                      text: "User Added Successfuly",
                       icon: "success",
                       confirmButtonText: "Cool!"
                       
@@ -46,7 +57,8 @@ const Register = () => {
 
       })
       .catch(error => {
-        console.error(error)
+        console.error(error);
+        setRegisterError(error.message);
 
       })
   }
@@ -70,7 +82,11 @@ const Register = () => {
           <button className="btn btn-neutral mt-4 w-full">Register</button>
         </fieldset>
     </form>
-   
+        {
+          registerError && <p className="text-red-700">{registerError}</p>
+        }
+
+      
    
     <p className="text-center mt-4 mb-16 ">Do you not have an account? <Link className="text-blue-600 font-bold ml-2" to='/login'>Login</Link> </p>
 
