@@ -63,21 +63,29 @@ const Register = () => {
       })
   }
   return (
-      <div className=" flex flex-col items-center justify-center">
+     <div
+      className="min-h-screen bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url('https://i.ibb.co.com/t01ML5f/image.png')",
+      }}>
+
+
+   <div className=" flex flex-col items-center justify-center py-24">
     
       <div className="flex flex-col w-1/4">
 
-    <h2 className="text-3xl text-center pt-32 pb-10">Register your account</h2>
-         <form onSubmit={handleRegister}  className="w-full">
-      <fieldset className="fieldset w-full place-items-center">
+    <h2 className="text-3xl text-white font-bold text-center pt-24 pb-10">Register your account</h2>
+         <form onSubmit={handleRegister}  className="w-full text-white font-bold text-xl">
+      <fieldset className="fieldset w-full place-items-center ">
           <label className="text-start justify-self-start">You Name</label>
-          <input type="text" className="input w-full mb-2" name='name' required placeholder="Nmae" />
+          <input type="text" className="input w-full my-2 opacity-60" name='name' required placeholder="Nmae" />
           <label className="text-start justify-self-start">Photo URL</label>
-          <input type="text" className="input w-full mb-2" name="photo" required placeholder="Photo" />
+          <input type="text" className="input w-full my-2 opacity-60" name="photo" required placeholder="Photo" />
           <label className="text-start justify-self-start">Email</label>
-          <input type="email" className="input w-full mb-2" name="email" required placeholder="Email" />
+          <input type="email" className="input w-full my-2 opacity-60" name="email" required placeholder="Email" />
           <label className="text-start justify-self-start">Password</label>
-          <input type="password" className="input w-full" name="password" required  placeholder="Password" />
+          <input type="password" className="input w-full my-2 opacity-60" name="password" required  placeholder="Password" />
           <div className="flex gap-2 justify-self-start"> <input type="checkbox" defaultChecked className="checkbox size-3"/> <p>Accept term and conditions</p></div>
           <button className="btn btn-neutral mt-4 w-full">Register</button>
         </fieldset>
@@ -92,6 +100,9 @@ const Register = () => {
 
     </div>
     </div>
+</div>
+     
+   
      
   )
 }

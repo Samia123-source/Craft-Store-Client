@@ -66,10 +66,20 @@ const UpdateCraft = () => {
 
 
   return (
+<div
+      className="min-h-screen bg-cover bottom-0  bg-center"
+      
+      style={{
+        backgroundImage:
+          "url('https://i.ibb.co.com/QjM9xr2m/image.png')",
+          
+      }}
+    >
     <div className=" m-16">
-      <div className="min-h-screen p-32">
+      <div className="  min-h-screen p-32">
          <NavLink to='/'><h1 className="font-rancho text-left text-3xl">Back to home</h1></NavLink>
-      <div className="bg-[#F4F3F0] p-24 rounded-lg">
+      <div className="bg-white/20 backdrop-blur-md 
+                  border border-white/40 shadow-xl p-24 rounded-lg">
             <h2  className="text-4xl text-[#374151] text-center font-cormorantGaramond mb-7">Update Craft:{name}</h2>
             <p className="text-center mb-6 text-lg text-[#1B1A1A] font-raleway">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
    
@@ -152,13 +162,13 @@ const UpdateCraft = () => {
     </div>
     
 
-    <input type="submit" value="Add Item" className="btn btn-block font-poiretOne bg-[#D2B48C] hover:bg-[#D2B48C] text-2xl text-[#331A15]"  />
+    <input type="submit" value="Add Item" className="btn btn-block font-poiretOne bg-[#d2a68c] hover:bg-[#d2a08c] text-2xl text-[#331A15]"  />
 
   </form>
       </div>
    </div>
      </div>
-
+</div>
       
   )
 }

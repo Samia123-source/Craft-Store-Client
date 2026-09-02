@@ -16,9 +16,10 @@ const CraftDetails = () => {
 
   return (
     <div>
+        
           <div className="min-h-screen p-16">
 
-            <div className="max-w-5xl mx-auto bg-[#F4F3F0] rounded-lg shadow-lg p-8">
+            <div className="max-w-5xl mx-auto bg-[#b99256] rounded-lg shadow-lg p-8">
 
                 <div className="md:flex gap-10">
 

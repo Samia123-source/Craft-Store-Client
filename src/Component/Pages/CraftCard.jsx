@@ -44,32 +44,40 @@ const CraftCard = ({craft, crafts, setCrafts}) => {
 
   } 
   return (
-      <div className="card card-side bg-base-100 shadow-xl">
+    
+    
+    <div className="py-6">
+      <div className="card card-side shadow-xl bg-[#F5F4F1] text-black w-">
   <figure>
-    <img
+    <img className="mr-4 object-cover"
       src={photo}
       alt="pottery" />
   </figure>
-  <div className="card-body">
-    <h2 className="card-title text-2xl">{name}</h2>
-    <p className="text-xl">BDT {price}</p>
-    <p className="text-2xl">{availability}</p>
-    <p className="text-2xl">{details}</p>
+  
+    <div className="w-full mt-14 font-bold justify-between flex ">
+   <div>
+     <h2 className="card-title text-2xl">{name}</h2>
+    <p className="text-xl mt-3">BDT {price}</p>
+    <p className="text-lg text-red-600">{availability}</p>
+    
+   </div>
     <div className="card-actions justify-end">
-      <div className="join join-vertical gap-4">
+      <div className="join join-vertical gap-4 pr-4">
   <Link to={`/craft/${_id}`}>
-  <button className="btn btn-active">View Details</button>
+  <button className="w-24 h-12 text-white font-bold bg-slate-600 rounded-md">View Details</button>
   </Link>
   <Link to= {`/updateCraft/${_id}`}>  
-     <button className="btn btn-active">Edit</button>
+     <button className="w-24 h-12 text-white font-bold bg-teal-700 rounded-md">Edit</button>
   </Link>
   <button 
    onClick={() => handleDelete(_id)}
-  className="btn bg-red-700">Delete</button>
+  className="w-24 h-12 text-white font-bold bg-red-700 rounded-md">Delete</button>
 </div>
     </div>
   </div>
+  </div>
 </div>
+
   )
 }
 

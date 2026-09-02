@@ -47,10 +47,19 @@ const AddCraftItem = () => {
 
    }
   return (
+     <div
+      className="min-h-screen bg-cover bottom-0  bg-center"
+      style={{
+        backgroundImage:
+          "url('https://i.ibb.co.com/QjM9xr2m/image.png')",
+          
+      }}
+    >
      <div className="min-h-screen p-32">         
-      <div className="bg-[#F4F3F0] p-24 rounded-lg">
-            <h2  className="text-4xl text-[#374151] text-center font-cormorantGaramond mb-7">Add Art and Craft</h2>
-            <p className="text-center mb-6 text-lg text-[#1B1A1A] font-raleway">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
+      <div className=" bg-white/20 backdrop-blur-md 
+                  border border-white/40 shadow-xl p-12 rounded-lg">
+            <h2  className="text-4xl text-[#374151] text-center font-cormorantGaramond font-bold mb-7">Add Art and Craft</h2>
+            <p className="text-center mb-6 text-lg text-[#1B1A1A] font-raleway font-bold">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
    
   <form onSubmit={handleAddItem}>
 
@@ -131,10 +140,11 @@ const AddCraftItem = () => {
     </div>
     
 
-    <input type="submit" value="Add Item" className="btn btn-block font-poiretOne bg-[#D2B48C] hover:bg-[#D2B48C] text-2xl text-[#331A15]"  />
+    <input type="submit" value="Add Item" className="btn btn-block font-poiretOn font-bold bg-[#775d4d] hover:bg-[#ad7f6d] text-2xl text-white"  />
 
   </form>
       </div>
+   </div>
    </div>
   )
 }

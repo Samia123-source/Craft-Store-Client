@@ -41,12 +41,16 @@ const Users = () => {
     }
 
   return (
-    <div className="m-32 text-white text-4xl">
-        <h2>Users:{loadedUsers.length}</h2>
-        <div className="overflow-x-auto">
-  <table className="table">
+    <div className=" text-white font-bold text-4xl bg-[url('https://i.ibb.co.com/hxKMLnwc/image.png')]">
+      
+              
+        <div className="overflow-x-auto px-6">
+           <h2 className="m-24 border bg-slate-100  text-blue-950">Total Users:{loadedUsers.length}</h2>
+  <div className="card  bg-yellow-700/20 backdrop-blur-md 
+                  border border-white/40 shadow-xl">
+    <table className="table mt-16 text-white">
     {/* head */}
-    <thead>
+    <thead className="text-3xl font-bold text-black">
       <tr>
         <th></th>
         <th>Email</th>
@@ -55,7 +59,7 @@ const Users = () => {
         <th>Action</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className="text-lg">
       {/* row 1 */}
      {
         loadedUsers.map(user =>  <tr key={user._id}>
@@ -64,7 +68,7 @@ const Users = () => {
         <td>{user.createdAt}</td>
         <td></td>
         <td>
-            <button onClick={() => handleDelete(user._id)} className="btn ">X</button>
+            <button onClick={() => handleDelete(user._id)} className=" ">X</button>
         </td>
 
       </tr>
@@ -73,6 +77,7 @@ const Users = () => {
       
     </tbody>
   </table>
+  </div>
 </div>
     </div>
   )

@@ -57,18 +57,27 @@ const SignIn = () => {
   }
   const [showPassword, setShowPassword] = useState(false);
   return (
-  <div className=" flex flex-col items-center justify-center">
+     <div
+      className="min-h-screen bg-cover bottom-0  bg-center"
+      style={{
+        backgroundImage:
+          "url('https://i.ibb.co.com/t01ML5f/image.png')",
+          
+      }}
+    >
+     
+  <div className=" flex flex-col items-center justify-center ">
 
-      <div className="flex flex-col w-1/4">
-
-        <h2 className="text-3xl text-center pt-32 pb-10">Login to your account</h2>
-        <form onSubmit={handleLogIn}>
+      <div className="flex flex-col w-1/4 text-xl text-white font-bold">
+ 
+        <h2 className="text-3xl font-bold  mt-16 text-center pt-32 pb-10">Login to your account</h2>
+        <form onSubmit={handleLogIn} className="">
           <fieldset className="fieldset w-full place-items-center">
-            <label className="text-start justify-self-start">Email</label>
-            <input type="email" className="input w-full mb-2" name="email" placeholder="Email" />
+            <label className="text-start justify-self-start ">Email</label>
+            <input type="email" className="input w-full my-2 opacity-60" name="email" placeholder="Email" />
             <label className="text-start justify-self-start">Password</label>
             <div className="relative w-full">
-              <input type= {showPassword ? 'text':"password"} className="input w-full" name="password" placeholder="Password" />
+              <input type= {showPassword ? 'text':"password"} className="input w-full my-2 opacity-60" name="password" placeholder="Password" />
 
               <span className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" onClick={() =>
                  setShowPassword(!showPassword)}>
@@ -86,6 +95,8 @@ const SignIn = () => {
         </p>
       </div>
     </div>
+    </div>
+   
   )
 }
 

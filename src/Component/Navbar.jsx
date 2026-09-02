@@ -28,7 +28,7 @@ const Navbar = () => {
     
     </>
   return (
-<div className="absolute top-0 left-0 w-full z-50 m-0">
+<div className="absolute top-0 left-0 w-full z-50">
       <div className="navbar font-poiretOne font-extrabold text-white max-w-7xl mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
@@ -63,14 +63,14 @@ const Navbar = () => {
   <div className="navbar-end">
     {
       user ?
-      <button onClick = {handleSignOut} className="btn">Log Out</button>
+      <button onClick = {handleSignOut} className="text-lg font-bold">Log Out</button>
       :
       <Link to="/signIn">
-      <button>SignIn</button>
+      <button>Sign In</button>
      </Link>
     }
   
-   <div className="dropdown dropdown-end">
+   <div className="dropdown dropdown-end ml-4">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
           <img

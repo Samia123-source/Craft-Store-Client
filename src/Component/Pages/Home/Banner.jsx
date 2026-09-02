@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 const Banner = () => {
   return (
-    <div className="w-screen mt-0">
+    <div className="">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         navigation
