@@ -43,7 +43,7 @@ const Banner = () => {
                   and creativity.
                 </p>
 
-                <button className="btn mt-6">
+                <button className="bg-black opacity-60 text-lg rounded-md  w-44 h-20 mt-6">
                   Explore Collection
                 </button>
               </div>
@@ -73,7 +73,7 @@ const Banner = () => {
                   Unique pottery and ceramics for your home.
                 </p>
 
-                <button className="btn mt-6">
+                <button className="bg-black  w-44 h-20  opacity-60 text-lg rounded-md mt-6">
                   Shop Now
                 </button>
               </div>
@@ -101,7 +101,7 @@ const Banner = () => {
                   Unique pottery and ceramics for your home.
                 </p>
 
-                <button className="btn mt-6">
+                <button className=" bg-black  w-44 h-20 opacity-60 text-lg rounded-md mt-6">
                   Shop Now
                 </button>
               </div>
