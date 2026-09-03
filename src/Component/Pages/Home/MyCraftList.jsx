@@ -15,7 +15,7 @@ const MyCraftList = () => {
         </h2>
         <div>
             {
-                myCrafts.map(myCraft=> <CraftCard key={myCraft._id} myCraft={myCraft} myCrafts={myCrafts} setmyCrafts={setmyCrafts}></CraftCard>)
+                myCrafts.map(myCraft=> <CraftCard key={myCraft._id} craft={myCraft} crafts={myCrafts} setCrafts={setmyCrafts}></CraftCard>)
             }
         </div>
     </div>

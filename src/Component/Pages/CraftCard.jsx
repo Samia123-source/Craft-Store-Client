@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-const CraftCard = ({craft, crafts, setCrafts, myCraft, myCrafts, setMyCrafts}) => {
+const CraftCard = ({craft, crafts, setCrafts}) => {
     const {_id, name, availability, price, details, photo} = craft;
 
   const handleDelete = _id => {
