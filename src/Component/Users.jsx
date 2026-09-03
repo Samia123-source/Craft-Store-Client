@@ -44,15 +44,16 @@ const Users = () => {
     <div className=" text-white font-bold text-4xl bg-[url('https://i.ibb.co.com/hxKMLnwc/image.png')]">
       
               
-        <div className="overflow-x-auto px-6">
-           <h2 className="m-24 border bg-slate-100  text-blue-950">Total Users:{loadedUsers.length}</h2>
-  <div className="card  bg-yellow-700/20 backdrop-blur-md 
-                  border border-white/40 shadow-xl">
-    <table className="table mt-16 text-white">
+        <div className="overflow-x-auto p-6">
+           <h2 className="mt-20 bg-white/20 backdrop-blur-sm 
+                  border border-white/40 shadow-xl text-blue-950">Total Users:{loadedUsers.length}</h2>
+  <div className="card  bg-yellow-700/20 backdrop-blur-sm 
+                  border border-white/40 shadow-xl mt-8">
+    <table className="table  text-white">
     {/* head */}
     <thead className="text-3xl font-bold text-black">
       <tr>
-        <th></th>
+        <th>Serial Number</th>
         <th>Email</th>
         <th>Created At</th>
         <th>Last Logged In</th>

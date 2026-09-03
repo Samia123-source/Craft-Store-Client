@@ -17,9 +17,10 @@ const CraftDetails = () => {
   return (
     <div>
         
-          <div className="min-h-screen p-16">
+          <div className="min-h-screen p-28 bg-[url('https://i.ibb.co.com/LdbZ5KgM/image.png')]">
 
-            <div className="max-w-5xl mx-auto bg-[#b99256] rounded-lg shadow-lg p-8">
+            <div className="max-w-5xl mx-auto bg-black/10 backdrop-blur-md 
+                  border border-black/40 shadow-xl rounded-lg p-8">
 
                 <div className="md:flex gap-10">
 
@@ -33,9 +34,9 @@ const CraftDetails = () => {
                     </div>
 
                     {/* Details */}
-                    <div className="md:w-1/2 text-[#0a0605]">
+                    <div className="md:w-1/2 text-white">
 
-                        <h1 className="text-4xl font-bold text-[#0a0605] mb-5">
+                        <h1 className="text-4xl font-bold mb-5">
                             {name}
                         </h1>
 
@@ -48,7 +49,7 @@ const CraftDetails = () => {
                         </p>
 
                         <p className="text-lg mb-3">
-                            <strong>Price:</strong> ৳{price}
+                            <strong>Price: </strong> BDT {price}
                         </p>
 
                         <p className="text-lg mb-3">
@@ -57,10 +58,10 @@ const CraftDetails = () => {
 
                         <div className="mt-6">
                             <h2 className="text-2xl font-semibold mb-2">
-                                Description
+                                Description:
                             </h2>
 
-                            <p className="text-lg text-gray-700 mb-8">
+                            <p className="text-lg text-white mb-8">
                                 {details}
                             </p>
 

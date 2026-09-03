@@ -48,7 +48,7 @@ const AddCraftItem = () => {
    }
   return (
      <div
-      className="min-h-screen bg-cover bottom-0  bg-center"
+      className="min-h-screen bg-cover w-full mb-0  "
       style={{
         backgroundImage:
           "url('https://i.ibb.co.com/QjM9xr2m/image.png')",

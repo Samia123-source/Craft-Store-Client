@@ -24,17 +24,17 @@ const Home = () => {
         <div className="grid md:grid-cols-4 gap-4 ml-12">
               
           {
-            crafts.slice(0,6).map(craft => <SwiperSlide key={craft._id}><Crafts  craft={craft}></Crafts></SwiperSlide>)
+            crafts.slice(0,4).map(craft => <SwiperSlide key={craft._id}><Crafts  craft={craft}></Crafts></SwiperSlide>)
           }
         </div>
         <NavLink to='/craftList'>
         <div>
-          <button className="btn btn-primary">View More</button>
+          <button className="btn btn-primary ml-12">View More</button>
         </div>
         </NavLink>
 
       <div>
-        <h2 className="text-5xl text-black font-bold text-center mt-10">Craft Categories Section</h2>
+        <h2 className="text-5xl text-black font-bold text-center my-10">Craft Categories Section</h2>
       </div>
    
     </div>
