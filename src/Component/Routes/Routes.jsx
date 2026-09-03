@@ -38,7 +38,8 @@ const Routes = createBrowserRouter([
             {
                 path: '/myCraft/:email',
                 element: <PrivateRoute><MyCraftList></MyCraftList></PrivateRoute>,
-                loader: () => fetch('')
+                loader: ({ params }) =>
+  fetch(`http://localhost:5000/myCraft/${params.email}`)
             },
             {
                 path: "/addCraft",

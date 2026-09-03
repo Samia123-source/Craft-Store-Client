@@ -4,16 +4,18 @@ import CraftCard from "../CraftCard";
 
 
 const MyCraftList = () => {
-     const loadedcrafts = useLoaderData();
-  const[myCrafts, setmyCrafts] = useState(loadedcrafts);
+     const loadedmyCrafts = useLoaderData();
+
+  const[myCrafts, setmyCrafts] = useState(loadedmyCrafts);
+  console.log(myCrafts);
   return (
-    <div>
+    <div className="w-full p-5 mt-0 bg-[url('https://i.ibb.co.com/sJWfjD0Y/image.png')]">
         <h2 className="mt-20 text-2xl text-black font-bold">
             Total Item: {myCrafts.length}
         </h2>
         <div>
             {
-                myCrafts.map(myCraft=> <CraftCard key={myCraft._email} myCraft={myCraft} myCrafts={myCrafts} setmyCrafts={setmyCrafts}></CraftCard>)
+                myCrafts.map(myCraft=> <CraftCard key={myCraft._id} myCraft={myCraft} myCrafts={myCrafts} setmyCrafts={setmyCrafts}></CraftCard>)
             }
         </div>
     </div>
