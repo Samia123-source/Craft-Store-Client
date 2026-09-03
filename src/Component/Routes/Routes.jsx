@@ -12,6 +12,7 @@ import UpdateCraft from "../Pages/UpdateCraft"
 import CraftDetails from "../Pages/CraftDetails"
 import Users from "../Users"
 import PrivateRoute from "./PrivateRoute"
+import MyCraftList from "../Pages/Home/MyCraftList"
 
 
 const Routes = createBrowserRouter([
@@ -33,6 +34,11 @@ const Routes = createBrowserRouter([
                 element:<PrivateRoute><CraftList></CraftList></PrivateRoute>,
                 loader: () => fetch('http://localhost:5000/craft'),
               
+            },
+            {
+                path: '/myCraft/:email',
+                element: <PrivateRoute><MyCraftList></MyCraftList></PrivateRoute>,
+                loader: () => fetch('')
             },
             {
                 path: "/addCraft",

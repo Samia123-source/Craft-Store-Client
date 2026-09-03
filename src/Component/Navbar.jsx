@@ -25,6 +25,7 @@ const Navbar = () => {
     
     <li><NavLink to="/register">Register</NavLink></li>
     <li><NavLink to="/users">Users</NavLink></li>
+    <li><NavLink to="/myCraft/:username">My Craft List</NavLink></li>
     
     </>
   return (

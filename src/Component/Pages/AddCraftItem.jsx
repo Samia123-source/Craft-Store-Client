@@ -15,10 +15,12 @@ const AddCraftItem = () => {
     const price = form.price.value;
     const time = form.time.value;
     const details = form.details.value;
+    const username = form.username.value;
+    const email = form.email.value;
     const photo = form.photo.value; 
      
    
-    const newCraft = {name, category, availability, price, time, details, photo};
+    const newCraft = {name, category, availability, price, time, details, username, email, photo};
     console.log(newCraft);
 
      //send data to the server
@@ -69,16 +71,16 @@ const AddCraftItem = () => {
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Item Name</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
     
-    <input type="text"  name="name" placeholder="Coffee Name" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+    <input type="text"  name="name" placeholder="Craft Name" className="input input-bordered w-full bg-white  " />
   </label>
 </div>
       <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Category</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
    
     <input type="text" name="category" placeholder="Category" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
@@ -90,7 +92,7 @@ const AddCraftItem = () => {
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Available Status</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
     
     <input type="text"  name="availability" placeholder="availability" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
@@ -99,7 +101,7 @@ const AddCraftItem = () => {
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Price</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
    
     <input type="text" name="price" placeholder="Price" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
@@ -112,7 +114,7 @@ const AddCraftItem = () => {
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Processing Time</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
     
     <input type="text"  name="time" placeholder="Time" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
@@ -121,7 +123,7 @@ const AddCraftItem = () => {
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Details</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
    
     <input type="text" name="details" placeholder="Details" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
@@ -133,16 +135,16 @@ const AddCraftItem = () => {
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">User Name</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
     
     <input type="text"  name="username" placeholder="user Name" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
 </div>
       <div className="form-control md:w-1/2">
-  <label className="label">
-    <span className="label-text text-[#1B1A1A] font-semibold text-xl">User EMail</span>
+  <label className="label text-black text-lg font-bold">
+    <span className="label-text text-[#1B1A1A] font-semibold text-xl">User Email</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
    
     <input type="text" name="email" placeholder="Enter Email" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
@@ -153,7 +155,7 @@ const AddCraftItem = () => {
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Photo</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
     
     <input type="text"  name="photo" placeholder="Enter Photo URL" className="input input-bordered w-full bg-white text-[#1B1A1A]  mb-8" />
   </label>
