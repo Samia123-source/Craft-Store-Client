@@ -86,8 +86,8 @@ const Register = () => {
           <input type="email" className="input w-full my-2 opacity-60" name="email" required placeholder="Email" />
           <label className="text-start justify-self-start">Password</label>
           <input type="password" className="input w-full my-2 opacity-60" name="password" required  placeholder="Password" />
-          <div className="flex gap-2 justify-self-start"> <input type="checkbox" defaultChecked className="checkbox size-3"/> <p>Accept term and conditions</p></div>
-          <button className="btn btn-neutral mt-4 w-full">Register</button>
+          <div className="flex gap-2 justify-self-start"> <input type="checkbox"  className="checkbox "/> <p>Accept term and conditions</p></div>
+          <button className="btn btn-neutral mt-4 w-full text-2xl text-white">Register</button>
         </fieldset>
     </form>
         {

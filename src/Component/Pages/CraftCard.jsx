@@ -48,8 +48,8 @@ const CraftCard = ({craft, crafts, setCrafts}) => {
     
     <div className="py-6">
       <div className="card card-side shadow-xl bg-[#F5F4F1] text-black w-">
-  <figure>
-    <img className="mr-4 object-cover"
+  <figure className="mr-4">
+    <img className=" h-[300px] w-[400px]"
       src={photo}
       alt="pottery" />
   </figure>

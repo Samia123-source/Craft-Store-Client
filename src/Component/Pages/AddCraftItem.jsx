@@ -56,7 +56,7 @@ const AddCraftItem = () => {
       }}
     >
      <div className="min-h-screen p-32">         
-      <div className=" bg-white/20 backdrop-blur-md 
+      <div className=" bg-white/20 backdrop-blur-sm
                   border border-white/40 shadow-xl p-12 rounded-lg">
             <h2  className="text-4xl text-[#374151] text-center font-cormorantGaramond font-bold mb-7">Add Art and Craft</h2>
             <p className="text-center mb-6 text-lg text-[#1B1A1A] font-raleway font-bold">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
@@ -105,6 +105,7 @@ const AddCraftItem = () => {
   </label>
 </div>
     </div>
+
     {/* form row 3 */}
     <div className="md:flex gap-4 mb-8">
       <div className="form-control md:w-1/2">
@@ -127,6 +128,26 @@ const AddCraftItem = () => {
 </div>
     </div>
     {/* form row 4 */}
+    <div className="md:flex gap-4 mb-8">
+      <div className="form-control md:w-1/2">
+  <label className="label">
+    <span className="label-text text-[#1B1A1A] font-semibold text-xl">User Name</span>
+  </label>
+  <label className="input-group">
+    
+    <input type="text"  name="username" placeholder="user Name" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+  </label>
+</div>
+      <div className="form-control md:w-1/2">
+  <label className="label">
+    <span className="label-text text-[#1B1A1A] font-semibold text-xl">User EMail</span>
+  </label>
+  <label className="input-group">
+   
+    <input type="text" name="email" placeholder="Enter Email" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+  </label>
+</div>
+    </div>
     <div className="md:flex gap-4">
       <div className="form-control md:w-full">
   <label className="label">
