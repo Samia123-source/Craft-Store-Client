@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import CraftCard from "../CraftCard";
+import MyCraftCard from "../MyCraftCard";
 
 
 const MyCraftList = () => {
@@ -15,7 +16,7 @@ const MyCraftList = () => {
         </h2>
         <div>
             {
-                myCrafts.map(myCraft=> <CraftCard key={myCraft._id} craft={myCraft} crafts={myCrafts} setCrafts={setmyCrafts}></CraftCard>)
+                myCrafts.map(myCraft=> <MyCraftCard key={myCraft._id} craft={myCraft} crafts={myCrafts} setCrafts={setmyCrafts}></MyCraftCard>)
             }
         </div>
     </div>

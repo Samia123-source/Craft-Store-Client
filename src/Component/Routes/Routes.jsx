@@ -13,6 +13,7 @@ import CraftDetails from "../Pages/CraftDetails"
 import Users from "../Users"
 import PrivateRoute from "./PrivateRoute"
 import MyCraftList from "../Pages/Home/MyCraftList"
+import Categories from "../Pages/Categories"
 
 
 const Routes = createBrowserRouter([
@@ -31,15 +32,21 @@ const Routes = createBrowserRouter([
             },
             {
                 path:'/craftList',
-                element:<PrivateRoute><CraftList></CraftList></PrivateRoute>,
+                element:<CraftList></CraftList>,
                 loader: () => fetch('http://localhost:5000/craft'),
               
+            },
+            {
+                path: '/categorycraft/:category',
+                element:<Categories></Categories>,
+                
+
             },
             {
                 path: '/myCraft/:email',
                 element: <PrivateRoute><MyCraftList></MyCraftList></PrivateRoute>,
                 loader: ({ params }) =>
-  fetch(`http://localhost:5000/myCraft/${params.email}`)
+                fetch(`http://localhost:5000/myCraft/${params.email}`)
             },
             {
                 path: "/addCraft",

@@ -11,6 +11,8 @@ const UpdateCraft = () => {
         availability,
         price,
         details,
+        email, 
+        username,
         photo,
         time
     } = craft;
@@ -84,25 +86,24 @@ const UpdateCraft = () => {
             <p className="text-center mb-6 text-lg text-[#1B1A1A] font-raleway">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
    
   <form onSubmit={handleUpdatedItem}>
-
-    {/* form row 1 */}
-    <div className="md:flex gap-4 mb-8">
+    {/* form row 1*/}
+     <div className="md:flex gap-4 mb-8">
       <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Item Name</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
     
-    <input type="text" name='name' defaultValue={name} placeholder="Craft Name" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+    <input type="text"  name="name" placeholder="Craft Name" defaultValue={name} className="input input-bordered w-full bg-white  " />
   </label>
 </div>
       <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Category</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
    
-    <input type="text" name="category" defaultValue={category} placeholder="Category" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+    <input type="text" name="category" placeholder="Category" defaultValue={category} className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
 </div>
     </div>
@@ -112,57 +113,78 @@ const UpdateCraft = () => {
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Available Status</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
     
-    <input type="text"  name="availability" defaultValue={availability} placeholder="availability" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+    <input type="text"  name="availability" placeholder="availability" defaultValue={availability} className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
 </div>
       <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Price</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
    
-    <input type="text" name="price" defaultValue={price} placeholder="Price" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+    <input type="text" name="price" placeholder="Price" defaultValue={price} className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
 </div>
     </div>
+
     {/* form row 3 */}
     <div className="md:flex gap-4 mb-8">
       <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Processing Time</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
     
-    <input type="text"  name="time" defaultValue={time}   placeholder="Time" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+    <input type="text"  name="time" placeholder="Time" defaultValue={time} className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
 </div>
       <div className="form-control md:w-1/2">
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Details</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
    
-    <input type="text" name="details" defaultValue={details} placeholder="Details" className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+    <input type="text" name="details" placeholder="Details" defaultValue={details} className="input input-bordered w-full bg-white text-[#1B1A1A] " />
   </label>
 </div>
     </div>
     {/* form row 4 */}
+    <div className="md:flex gap-4 mb-8">
+      <div className="form-control md:w-1/2">
+  <label className="label">
+    <span className="label-text text-[#1B1A1A] font-semibold text-xl">User Name</span>
+  </label>
+  <label className="input-group text-black text-lg font-bold">
+    
+    <input type="text"  name="username" placeholder="user Name" defaultValue={username} className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+  </label>
+</div>
+      <div className="form-control md:w-1/2">
+  <label className="label text-black text-lg font-bold">
+    <span className="label-text text-[#1B1A1A] font-semibold text-xl">User Email</span>
+  </label>
+  <label className="input-group text-black text-lg font-bold">
+   
+    <input type="text" name="email" placeholder="Enter Email" defaultValue={email} className="input input-bordered w-full bg-white text-[#1B1A1A] " />
+  </label>
+</div>
+    </div>
     <div className="md:flex gap-4">
       <div className="form-control md:w-full">
   <label className="label">
     <span className="label-text text-[#1B1A1A] font-semibold text-xl">Photo</span>
   </label>
-  <label className="input-group">
+  <label className="input-group text-black text-lg font-bold">
     
-    <input type="text"  name="photo" defaultValue={photo} placeholder="Enter Photo URL" className="input input-bordered w-full bg-white text-[#1B1A1A]  mb-8" />
+    <input type="text"  name="photo" placeholder="Enter Photo URL" defaultValue={photo} className="input input-bordered w-full bg-white text-[#1B1A1A]  mb-8" />
   </label>
 </div>     
     </div>
     
 
-    <input type="submit" value="Add Item" className="btn btn-block font-poiretOne bg-[#d2a68c] hover:bg-[#d2a08c] text-2xl text-[#331A15]"  />
+    <input type="submit" value="Add Item" className="btn btn-block font-poiretOn font-bold bg-[#775d4d] hover:bg-[#ad7f6d] text-2xl text-white"  />
 
   </form>
       </div>

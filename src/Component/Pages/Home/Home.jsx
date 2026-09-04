@@ -1,4 +1,4 @@
-import { NavLink, useLoaderData } from "react-router-dom"
+import { Link, NavLink, useLoaderData } from "react-router-dom"
 import Footer from "../../Footer"
 import Navbar from "../../Navbar"
 import Banner from "./Banner"
@@ -7,10 +7,13 @@ import Crafts from "./Crafts"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import CategoryCard from "../CategoryCard"
 
 
 const Home = () => {
-  const crafts = useLoaderData();
+  const alldata = useLoaderData();
+  const {crafts,category} = alldata;
+
   return (
     <div>
    
@@ -24,7 +27,7 @@ const Home = () => {
         <div className="grid md:grid-cols-4 gap-4 ml-12">
               
           {
-            crafts.slice(0,4).map(craft => <SwiperSlide key={craft._id}><Crafts  craft={craft}></Crafts></SwiperSlide>)
+            crafts.slice(0,4).map(craft => <SwiperSlide key={craft._id}><Crafts craft={craft}></Crafts></SwiperSlide>)
           }
         </div>
         <NavLink to='/craftList'>
@@ -33,10 +36,24 @@ const Home = () => {
         </div>
         </NavLink>
 
-      <div>
-        <h2 className="text-5xl text-black font-bold text-center my-10">Craft Categories Section</h2>
+      <div className="px-16   ">
+        <h2 className="text-6xl h-24 py-4 text-black font-bold text-center my-14 bg-gray-400 rounded-md">Craft Categories Section</h2>
       </div>
-   
+
+<Link to='/categorycraft/:category'>
+   <div className="flex flex-col gap-6 px-8 bg-[#E6E6FA] ">
+  {
+  category.map((category, index) => (
+    <div
+      key={category._id}
+      className={` ${
+        index % 2 === 0 ? "self-start" : "self-end"
+      }`}
+    >
+      <CategoryCard category={category}></CategoryCard>
+    </div>
+  ))}
+</div></Link>
     </div>
   )
 }

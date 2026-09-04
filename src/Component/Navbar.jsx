@@ -21,7 +21,9 @@ const Navbar = () => {
 
     const navlinks = <>
     <li><NavLink to="/">Home</NavLink></li>
+    <li><NavLink to='/craftList'>All Craft Item</NavLink></li>
     <li><NavLink to="/addCraft">Add Craft Item</NavLink></li>
+
     
     <li><NavLink to="/register">Register</NavLink></li>
     <li><NavLink to="/users">Users</NavLink></li>
