@@ -40,7 +40,7 @@ const Home = () => {
         <h2 className="text-6xl h-24 py-4 text-black font-bold text-center my-14 bg-gray-400 rounded-md">Craft Categories Section</h2>
       </div>
 
-<Link to='/categorycraft/:category'>
+
    <div className="flex flex-col gap-6 px-8 bg-[#E6E6FA] ">
   {
   category.map((category, index) => (
@@ -49,11 +49,12 @@ const Home = () => {
       className={` ${
         index % 2 === 0 ? "self-start" : "self-end"
       }`}
-    >
+    ><Link to={`/categorycraft/${category.name}`}>
       <CategoryCard category={category}></CategoryCard>
+      </Link>
     </div>
   ))}
-</div></Link>
+</div>
     </div>
   )
 }

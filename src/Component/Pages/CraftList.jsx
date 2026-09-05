@@ -9,7 +9,8 @@ import { useState } from "react";
 const CraftList = () => {
 
   const loadedcrafts = useLoaderData();
-  const[crafts, setCrafts] = useState(loadedcrafts);
+   console.log(loadedcrafts);
+  const[crafts, setCrafts] = useState(loadedcrafts.crafts);
 
   return (
    

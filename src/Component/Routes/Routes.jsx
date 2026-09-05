@@ -14,6 +14,7 @@ import Users from "../Users"
 import PrivateRoute from "./PrivateRoute"
 import MyCraftList from "../Pages/Home/MyCraftList"
 import Categories from "../Pages/Categories"
+import ErrorPage from "../ErrorPage"
 
 
 const Routes = createBrowserRouter([
@@ -21,6 +22,7 @@ const Routes = createBrowserRouter([
     {
         path:"/",
         element:<Root></Root>,
+        errorElement:<ErrorPage></ErrorPage>,
     
          
         children:[
@@ -39,6 +41,7 @@ const Routes = createBrowserRouter([
             {
                 path: '/categorycraft/:category',
                 element:<Categories></Categories>,
+                loader: ({params}) =>   fetch(`http://localhost:5000/categorycraft/${params.category}`)
                 
 
             },
